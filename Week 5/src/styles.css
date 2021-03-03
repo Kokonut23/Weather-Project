@@ -1,0 +1,251 @@
+body {
+  padding-top: 15px;
+  max-width: 635px;
+}
+
+.temperature-unit {
+  position: fixed;
+  right: 15px;
+  border-radius: 20px;
+  font-family: "Courier Prime", monospace;
+  font-size: 12px;
+}
+
+.temperature-unit button {
+  padding: 16px 17px;
+}
+
+.other-city {
+  padding: 25px 23px;
+  background: #51adcf;
+  border: 1px solid #51adcf;
+  border-radius: 5px;
+  font-size: 19px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.auckland {
+  position: relative;
+  left: 15px;
+}
+
+.jakarta {
+  position: relative;
+  left: 29px;
+}
+
+.atlanta {
+  position: relative;
+  left: 44px;
+}
+
+form .search-bar {
+  margin: 25px 0;
+  font-family: "Cormorant Garamond", serif;
+  width: 350px;
+  height: 46px;
+}
+
+form .submit-button {
+  font-family: "Cormorant Garamond", serif;
+  height: 45px;
+}
+
+#location {
+  background: rgb(38, 38, 233);
+  border: 1px solid rgb(38, 38, 233);
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 15px 17px;
+  border-radius: 10px;
+}
+
+.searched-city {
+  color: #03506f;
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  font-weight: 900;
+  margin: 17px 0;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+h2 {
+  font-family: "Courier Prime", monospace;
+  color: #68b0ab;
+  border: 1px solid #ffe3d8;
+  background: #ffe3d8;
+  width: 772px;
+}
+
+.layout-img-logo {
+  margin: 21px 0;
+}
+
+img,
+.rainybudapest {
+  margin: 25px 0;
+  width: 257px;
+  position: relative;
+}
+
+.logo {
+  position: relative;
+  text-align: center;
+  bottom: 422px;
+  left: 270px;
+  width: 500px;
+  height: 388px;
+  border: 2px solid #706897;
+  padding: 20px 20px 0 0;
+}
+
+.precipitation-wind {
+  position: relative;
+  left: 130px;
+  top: 23px;
+  font-size: 24px;
+  width: 100%;
+  color: #98d6ea;
+}
+
+img,
+.current-weather {
+  position: relative;
+  bottom: 10px;
+  width: 143px;
+}
+
+.weather-condition {
+  position: relative;
+  right: 90px;
+  bottom: 55px;
+  margin: 0;
+  padding: 0;
+  font-size: 47px;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  color: #111d5e;
+}
+
+h3 {
+  position: relative;
+  bottom: 408px;
+  font-family: "Courier Prime", monospace;
+  padding: 15px 0;
+}
+
+.strong-warm {
+  color: #ff4646;
+}
+
+.light-cold {
+  color: #09015f;
+}
+
+hr {
+  position: relative;
+  bottom: 395px;
+  height: 3px;
+  color: #c70039;
+}
+
+hr:not([size]) {
+  height: 2px;
+}
+
+.stuff-under-the-line {
+  position: relative;
+  bottom: 384px;
+  left: 5px;
+  font-size: 20px;
+}
+
+.day {
+  font-size: 23px;
+  font-weight: 600;
+  color: #0a043c;
+}
+
+span .tue {
+  position: relative;
+  left: 30px;
+}
+
+span .wed {
+  position: relative;
+  left: 23px;
+}
+
+span .thu {
+  position: relative;
+  left: 25px;
+}
+
+span .fri {
+  position: relative;
+  left: 38px;
+}
+
+span .sat {
+  position: relative;
+  left: 34px;
+}
+
+.weather-icon {
+  padding: 28px 30px;
+  background: #fce2ce;
+  border: 1px solid #f9f7d9;
+  border-radius: 5px;
+}
+
+.fa-cloud-sun,
+.fa-cloud-showers-heavy,
+.fa-cloud-meatball,
+.fa-cloud {
+  font-size: 32px;
+  color: #0a043c;
+}
+
+.temperature {
+  font-size: 21px;
+  position: relative;
+  left: 15px;
+  color: #c8d5b9;
+}
+
+.temp-tue {
+  position: relative;
+  left: 25px;
+}
+
+.temp-wed {
+  position: relative;
+  left: 21.5px;
+}
+
+.temp-thu {
+  position: relative;
+  left: 18px;
+}
+
+.temp-fri {
+  position: relative;
+  left: 25.5px;
+}
+
+.temp-sat {
+  position: relative;
+  right: -26px;
+}
+
+.temp-tue,
+.temp-wed,
+.temp-thu,
+.temp-fri,
+.temp-sat {
+  color: #158467;
+}

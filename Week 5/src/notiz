@@ -1,0 +1,112 @@
+let latitude=console.log(position.coords.latitude);
+    let longitude=console.log(position.coords.longitude);
+    let apiKey="9d6241dfed0d2530cebec36187e08a92";
+    let units="metric";
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&${longitude}&appid=${apiKey}&units=${units}`;
+    
+    axios.get(apiUrl).then(showTemperature);
+
+
+    
+function showTemperature(response) {
+    let currentTemperature=Math.round(response.data.main.temp);
+    alert(`It is currently ${currentTemperature}°C`);
+    let temperature=document.querySelector("#temperature");
+    temperature.innerHTML=`${currentTemperature}°C`;
+}
+
+
+
+
+
+
+
+
+function showPosition (position) {
+    alert (`Your latitude is ${position.coords.latitude} and you longitude is ${position.coords.longitude}`);
+}
+
+function findLocation (position) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let button=document.querySelector("#location");
+button.addEventListener("click",findLocation);
+
+
+
+
+
+function changeCity (event) {
+          event.preventDefault();
+          let cityInput=document.querySelector("#city-input");
+          let h1=document.querySelector("h1");
+          h1.innerHTML=cityInput.value;
+        }
+        
+
+        function displayCurrentTemperature (response) {
+    let weather=Math.round(response.data.main.temp);
+    let currentCity=response.data.name;
+    let heading=document.querySelector("h1");
+    let temperatureWeather=document.querySelector("#temperature");
+    heading.innerHTML=currentCity;
+    temperature.innerHTML=`${temperature}°C`;
+}
+
+
+
+//Show temperature
+function displayCurrentTemperature (response) {
+    let weather=Math.round(response.data.main.temp);
+    let currentCity=response.data.name;
+    let heading=document.querySelector("h1");
+    let temperatureWeather=document.querySelector("#temperature");
+    heading.innerHTML=currentCity;
+    temperature.innerHTML=`${temperature}°C`;
+}
+
+
+//Geolocation
+function showTemperature(response) {
+    let currentTemperature=Math.round(response.data.main.temp);
+    let temperature=document.querySelector("#temperature");
+    temperature.innerHTML=`${currentTemperature}°C`;
+}
+
+function showPosition (position) {
+   
+    let apiKey="65c37186688416b99a1a5f898893efdd";
+    let units="metric";
+    }
+
+
+
+
+    <div class="layout-img-logo">            
+				<div class="logo">
+                <h4 class="precipitation-wind">
+                    <em>
+                        Humidity: <span id="humidity"> </span> %
+                    </span>
+                    <br />
+                     Wind: <span id="wind"> </span> km/h
+								</h4>
+								
+                <img src="data:image/png;base64,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" class="current-weather" />
+                <h1 class="weather-condition">
+                    <span id="weather-condition">
+                    
+                    </span>
+                    <br />
+                    <span id="temperature">  
+                        
+                    </span>
+                    °C
+                    </span>
+                </h1>
+            </div>
+        </div>
+
+
+
