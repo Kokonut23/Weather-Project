@@ -249,3 +249,7 @@ span .sat {
 .temp-sat {
   color: #158467;
 }
+
+.bottom-text {
+  text-align: center;
+}
