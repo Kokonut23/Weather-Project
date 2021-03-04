@@ -91,7 +91,7 @@ function changeTemperature (event) {
     let temperature=document.querySelector("#temperature");
     let unit=document.querySelector("#unit");
     temperature.innerHTML=`45°`;
-    unit.innerHTML=` `;
+    unit.innerHTML=`F`;
 }
 let fahrenheit=document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click",changeTemperature);
