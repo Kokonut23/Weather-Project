@@ -89,7 +89,9 @@ currentLocationButton.addEventListener("click",getCurrentLocation);
 function changeTemperature (event) {
     event.preventDefault();
     let temperature=document.querySelector("#temperature");
-    temperature.innerHTML=`45°F`;    
+    let unit=document.querySelector("#unit");
+    temperature.innerHTML=`45°`;
+    unit.innerHTML=` `;
 }
 let fahrenheit=document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click",changeTemperature);
