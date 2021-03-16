@@ -70,138 +70,46 @@
         </h2>
 
         <div class="layout-img-logo">
-            <img src="images/rainybudapest.jpg" class="rainybudapest" alt="" />
-
-            <div class="logo">
-                <h4 class="precipitation-wind">
-                    <em>
-                         Humidity: <span id="humidity"> </span> %
-                        </span>
-                        <br />
-                         Wind: <span id="wind"> </span> km/h
-                    </em>
-                </h4>
-                <h1 class="weather-condition">
+            
+            <div class="row">
+                <div class="col-4">
+                    <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="mostly cloudy"
+                    />
+                    </div>
+                    <div class="col-4">
+                    <ul>
+                        <li>
                     <span id="weather-condition">
                     
                     </span>
-                    <br />
-                    <span id="temperature">  
-                        
+                    </li>
+                    <li>
+                    <span id="temperature">
+                    
                     </span>
                     <span id="unit">
-                    °C
+                        °C
                     </span>
-                </h1>
+                    </li>
+                    </ul>
+                    </div>
+                    <div class="col-4">
+                    <ul>
+                        <li>
+                         Humidity: <span id="humidity"> </span> %
+                        </span>
+                        </li>
+                        <li>
+                         Wind: <span id="wind"> </span> km/h
+                        </li>
+                    </div>
             </div>
         </div>
-        <h3>
-            <strong class="strong-warm">
-                Max /
-            </strong>
-            <span class="light-cold">
-                Min
-            </span>
-            <br />
-            <strong class="strong-warm">
-                9° /
-            </strong>
-            <span class="light-cold">
-                1°
-            </span>
-        </h3>
-
-        <hr>
-        <span class="stuff-under-the-line">
-            <span class="day">
-                <div class="row">
-                    <div class="col">
-                        <span class="tue">
-                            Tue
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="wed">
-                            Wed
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="thu">
-                            Thu
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="fri">
-                            Fri
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="sat">
-                            Sat
-                        </span>
-                    </div>
-                </div>
-            </span>
-            <div class="row" class="icons">
-                <div class="col">
-                    <button class="weather-icon">
-                        <i class="fas fa-cloud-sun"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="weather-icon">
-                        <i class="fas fa-cloud-showers-heavy"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="weather-icon">
-                        <i class="fas fa-cloud-meatball"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="weather-icon">
-                        <i class="fas fa-cloud-sun"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="weather-icon">
-                        <i class="fas fa-cloud"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <span class="temp-tue">
-                        7° / 3°
-                    </span>
-                </div>
-                <div class="col">
-                    <span class="temp-wed">
-                        5° / 3°
-                    </span>
-                </div>
-                <div class="col">
-                    <span class="temp-thu">
-                        3° / -4°
-                    </span>
-                </div>
-                <div class="col">
-                    <span class="temp-fri">
-                        6° / 3°
-                    </span>
-                </div>
-                <div class="col">
-                    <span class="temp-sat">
-                        2° / 0°
-                    </span>
-                </div>
-            </div>
-    </div>
-    </span>
-    </div>
-    <p class="bottom-text">
+    <small class="bottom-text">
         <a href="https://github.com/Kokonut23/Weather-Project" target="_blank"> Open-source code</a>, by Ildikó Brust
-    </p>
+    </small>
     <script src="src/JSWeek5.js"></script>
 </body>
 
