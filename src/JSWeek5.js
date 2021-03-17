@@ -85,7 +85,7 @@ currentLocationButton.addEventListener("click",getCurrentLocation);
 
 
 
-//Change temperature into Fahrenheit
+//Change temperature unit
 function changeTemperature (event) {
     event.preventDefault();
     let temperature=document.querySelector("#temperature");

@@ -1,7 +1,10 @@
-body {
+.weather-app {
   padding-top: 15px;
   max-width: 635px;
+  margin: 30px auto;
+  padding: 25px 15px;
   border: 1px solid #dadde1;
+  border-radius: 6px;
 }
 
 .temperature-unit {
@@ -79,26 +82,55 @@ h2 {
   color: #68b0ab;
   border: 1px solid #ffe3d8;
   background: #ffe3d8;
-  width: 772px;
+  width: 607px;
+}
+
+li {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+.weather-condition {
+  color: rgb(33, 33, 33);
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .layout-img-logo {
   margin: 21px 0;
 }
 
-.logo {
-  text-align: center;
-  width: 500px;
-  height: 388px;
-  border: 2px solid #706897;
-  padding: 20px 20px 0 0;
+.weather-logo {
+  margin-right: 10px;
+  height: 115px;
+  width: 115px;
 }
 
-img,
-.current-weather {
+.temperature-display {
+  color: rgb(33, 33, 33);
+  font-size: 57px;
+  line-height: 1;
+  font-weight: 400;
+}
+#unit {
   position: relative;
-  bottom: 10px;
-  width: 143px;
+  bottom: 16px;
+  right: 5px;
+  color: rgb(33, 33, 33);
+  font-size: 33px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.humidity {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.wind {
+  font-weight: 400;
+  font-size: 26px;
 }
 
 h3 {
@@ -223,4 +255,5 @@ span .sat {
 .bottom-text {
   display: block;
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
