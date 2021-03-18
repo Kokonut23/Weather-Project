@@ -50,9 +50,9 @@ form .search-bar {
   height: 46px;
 }
 
-form .submit-button {
-  font-family: "Cormorant Garamond", serif;
-  height: 45px;
+form .btn-primary {
+   height: 48px;
+   background: #2626E9;
 }
 
 #location {

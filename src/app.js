@@ -1,47 +1,56 @@
 // changes in code have to be implemented in CodeSandbox as well
-
-let weekday=document.querySelector("#weekday");
-let date=document.querySelector("#date");
-let time=document.querySelector("#time");
-
 let now=new Date();
 
-let minutes=now.getMinutes();
-if (minutes<10) {
-    minutes=`0${minutes}`;
-}
-let hours=now.getHours();
-if (hours<10) {
-    hours=`0${hours}`;
-}
+let time=document.querySelector("#time");
+let weekday=document.querySelector("#weekday");
+let date=document.querySelector("#date");
 let year=now.getFullYear();
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let day=days[now.getDay()];
 
-let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-];
-let month = months[now.getMonth()];
 
-let numbers=["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th","11th","12th","13th","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","29th","30th","31st"];
-let currentDate=numbers[now.getDate()-1];
+function formatDay(timestamp) {
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day=days[now.getDay()];
+    return `${day}`;
+}
 
-      weekday.innerHTML=`${day}`;
-      date.innerHTML=`${month} ${currentDate} ${year}`;
-      time.innerHTML=`${hours}:${minutes}`;
-      
+function formatDate (timestamp) {
+    let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
+    let month = months[now.getMonth()];
+    
+    let numbers=["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th","11th","12th","13th","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","29th","30th","31st"];
+    let currentDate=numbers[now.getDate()-1];
+    
+    return `${month} ${currentDate} ${year}`;
+}
+
+function formatTime(timestamp) {
+        
+    let minutes=now.getMinutes();
+    if (minutes<10) {
+        minutes=`0${minutes}`;
+    }
+    let hours=now.getHours();
+    if (hours<10) {
+        hours=`0${hours}`;
+    }
+    
+    return `${hours}:${minutes}`;
+}
+           
       function displayWeatherCondition (response) {
           console.log(response.data)
     document.querySelector("h1").innerHTML=response.data.name;
@@ -53,7 +62,10 @@ let currentDate=numbers[now.getDate()-1];
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     document.querySelector("#icon").setAttribute ("alt",response.data.weather[0].description);
-    }
+    weekday.innerHTML=formatDay(response.data.dt*1000);
+    date.innerHTML=formatDate(response.data.dt*1000);
+    time.innerHTML=formatTime(response.data.dt*1000);
+}
 
 function searchCity(city) {
  let apiKey="65c37186688416b99a1a5f898893efdd";
