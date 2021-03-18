@@ -43,12 +43,17 @@ let currentDate=numbers[now.getDate()-1];
       time.innerHTML=`${hours}:${minutes}`;
       
       function displayWeatherCondition (response) {
+          console.log(response.data)
     document.querySelector("h1").innerHTML=response.data.name;
     document.querySelector("#temperature").innerHTML=Math.round(response.data.main.temp);
     document.querySelector("#humidity").innerHTML= response.data.main.humidity; 
     document.querySelector("#wind").innerHTML= Math.round(response.data.wind.speed); 
     document.querySelector("#weather-condition").innerHTML=response.data.weather[0].main;
-}
+    document.querySelector("#icon").setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    document.querySelector("#icon").setAttribute ("alt",response.data.weather[0].description);
+    }
 
 function searchCity(city) {
  let apiKey="65c37186688416b99a1a5f898893efdd";
