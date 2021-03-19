@@ -51,10 +51,11 @@ function formatTime(timestamp) {
     return `${hours}:${minutes}`;
 }
            
-      function displayWeatherCondition (response) {
-          console.log(response.data)
+function displayWeatherCondition (response) {
+    celsiusTemperature=response.data.main.temp;
     document.querySelector("h1").innerHTML=response.data.name;
-    document.querySelector("#temperature").innerHTML=Math.round(response.data.main.temp);
+    document.querySelector("#temperature").innerHTML=Math.round(celsiusTemperature);
+    document.querySelector("#unit").innerHTML=`°C`;
     document.querySelector("#humidity").innerHTML= response.data.main.humidity; 
     document.querySelector("#wind").innerHTML= Math.round(response.data.wind.speed); 
     document.querySelector("#weather-condition").innerHTML=response.data.weather[0].main;
@@ -83,6 +84,7 @@ function searchCity(city) {
 let cityForm=document.querySelector("#city-form");
 cityForm.addEventListener("submit",handleSubmit);
 
+
 function searchLocation (position) {
     let apiKey="65c37186688416b99a1a5f898893efdd";
     let units="metric"; 
@@ -103,15 +105,29 @@ currentLocationButton.addEventListener("click",getCurrentLocation);
 
 
 //Change temperature unit
-function changeTemperature (event) {
+function changeUnitFahrenheit (event) {
     event.preventDefault();
     let temperature=document.querySelector("#temperature");
     let unit=document.querySelector("#unit");
-    temperature.innerHTML=`45°`;
-    unit.innerHTML=`F`;
+    let fahrenheitTemperature=(celsiusTemperature*9)/5+32;
+    temperature.innerHTML=Math.round(fahrenheitTemperature);
+    unit.innerHTML=`°F`;
 }
 let fahrenheit=document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click",changeTemperature);
+fahrenheit.addEventListener("click",changeUnitFahrenheit);
+
+function changeUnitCelsius (event) {
+    event.preventDefault();
+    let temperature=document.querySelector("#temperature");
+    let unit=document.querySelector("#unit");
+    temperature.innerHTML=Math.round(celsiusTemperature);
+    unit.innerHTML=`°C`;
+}
+
+let celsiusTemperature=null;
+
+let celsius=document.querySelector("#celsius");
+celsius.addEventListener("click",changeUnitCelsius);
 
 searchCity ("Budapest");
 

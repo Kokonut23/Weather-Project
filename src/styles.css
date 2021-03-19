@@ -7,23 +7,31 @@
   border-radius: 6px;
 }
 
-.temperature-unit {
-  position: fixed;
-  right: 15px;
-  border-radius: 20px;
-  font-family: "Courier Prime", monospace;
-  font-size: 12px;
+.body-2 {
+  position:relative;
+  bottom: 62px;
 }
 
-.temperature-unit button {
-  padding: 16px 17px;
+.btn-outline-success {
+  font-weight: 600;
+  line-height: 1.5;
+  position: relative;
+  right: -526px;
+  top:-30px;
+  margin: 0px;
+  border-radius: 6px;
+  font-family: "Courier Prime", monospace;
+  font-size: 15px;
+  padding: 9px 11px;
 }
 
 .other-city {
-  padding: 25px 23px;
+  position: relative;
+  right: 92px;
+  padding: 16px 20px;
   background: #51adcf;
   border: 1px solid #51adcf;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 19px;
   font-family: "Cormorant Garamond", serif;
 }
@@ -43,6 +51,11 @@
   left: 44px;
 }
 
+.form-search-location {
+  position: relative;
+  top: 15px;
+}
+
 form .search-bar {
   margin: 25px 0;
   font-family: "Cormorant Garamond", serif;
@@ -51,18 +64,24 @@ form .search-bar {
 }
 
 form .btn-primary {
-   height: 48px;
-   background: #2626E9;
+  position: relative;
+  bottom: 1px;
+  height: 47px;
+  background: #2626E9;
+  font-weight:500;
 }
 
 #location {
+  position: relative;
+  bottom: 72px;
+  left: 435px;
   background: rgb(38, 38, 233);
   border: 1px solid rgb(38, 38, 233);
   color: white;
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 18px;
-  padding: 15px 17px;
-  border-radius: 10px;
+  padding: 11px 12px;
+  border-radius: 5px;
 }
 
 .searched-city {
@@ -70,7 +89,7 @@ form .btn-primary {
   font-family: "Dancing Script", cursive;
   font-size: 60px;
   font-weight: 900;
-  margin: 17px 0;
+  margin: 15px 0;
 }
 
 h1 {
