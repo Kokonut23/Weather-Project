@@ -84,6 +84,49 @@ function searchCity(city) {
 let cityForm=document.querySelector("#city-form");
 cityForm.addEventListener("submit",handleSubmit);
 
+//Select city and temperature of button
+
+function searchStuttgart(city) {
+    let apiKey="65c37186688416b99a1a5f898893efdd";
+    let units="metric";    
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=stuttgart&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let stuttgart=document.querySelector("#stuttgart");
+stuttgart.addEventListener("click",searchStuttgart);
+
+function searchAuckland(city) {
+    let apiKey="65c37186688416b99a1a5f898893efdd";
+    let units="metric";    
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=auckland&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let auckland=document.querySelector("#auckland");
+auckland.addEventListener("click",searchAuckland);
+
+function searchJakarta(city) {
+    let apiKey="65c37186688416b99a1a5f898893efdd";
+    let units="metric";    
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=jakarta&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let jakarta=document.querySelector("#jakarta");
+jakarta.addEventListener("click",searchJakarta);
+
+function searchAtlanta(city) {
+    let apiKey="65c37186688416b99a1a5f898893efdd";
+    let units="metric";    
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=atlanta&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let atlanta=document.querySelector("#atlanta");
+atlanta.addEventListener("click",searchAtlanta);
+
+
 
 function searchLocation (position) {
     let apiKey="65c37186688416b99a1a5f898893efdd";
