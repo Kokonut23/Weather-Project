@@ -8,7 +8,7 @@
 }
 
 .body-2 {
-  position:relative;
+  position: relative;
   bottom: 62px;
 }
 
@@ -17,7 +17,7 @@
   line-height: 1.5;
   position: relative;
   right: -526px;
-  top:-30px;
+  top: -30px;
   margin: 0px;
   border-radius: 6px;
   font-family: "Courier Prime", monospace;
@@ -67,8 +67,8 @@ form .btn-primary {
   position: relative;
   bottom: 1px;
   height: 47px;
-  background: #2626E9;
-  font-weight:500;
+  background: #2626e9;
+  font-weight: 500;
 }
 
 #location {
@@ -169,7 +169,7 @@ h3 {
 
 hr {
   position: relative;
-  bottom: 395px;
+  bottom: -4px;
   height: 3px;
   color: #c70039;
 }
@@ -269,6 +269,39 @@ span .sat {
 .temp-fri,
 .temp-sat {
   color: #158467;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+}
+
+.weather-forecast h3 {
+  position: relative;
+  top: 10px;
+  color: rgb(186, 186, 186);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: rgb(135, 135, 135);
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
 
 .bottom-text {

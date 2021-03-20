@@ -1,0 +1,50 @@
+ <div class="col-2">
+                    <h3>07:00</h3>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
+                    <div class="weather-forecast-temperature">
+                        <strong>4°</strong>
+                        3°
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3>10:00</h3>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
+                    <div class="weather-forecast-temperature">
+                        <strong>4°</strong>
+                        3°
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3>13:00</h3>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
+                    <div class="weather-forecast-temperature">
+                        <strong>4°</strong>
+                        3°
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3>16:00</h3>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
+                    <div class="weather-forecast-temperature">
+                        <strong>4°</strong>
+                        3°
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3>19:00</h3>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
+                    <div class="weather-forecast-temperature">
+                        <strong>4°</strong>
+                        3°
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3>22:00</h3>
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
+                    <div class="weather-forecast-temperature">
+                        <strong>4°</strong>
+                        3°
+                    </div>
+                </div>
+                </div>
+                </div>
