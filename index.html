@@ -49,7 +49,7 @@
             <input type="submit" value="Search" class="btn btn-primary" />
         </form>
 <button id="location">
-    Current
+    Locate Me
 </button>
 </div>
 <div class="body-2">
@@ -68,15 +68,13 @@
             
             </span>
         </h2>
-
-        <div class="layout-img-logo"></div>
            <em>
                <span class="weather-condition" id="weather-condition">
            
             </span>
         </em>
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img
                     src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                     alt="partly cloudy"
@@ -88,20 +86,45 @@
                     </span>
                     <span id="unit">°C</span>
                     </div>
-                    <div class="col-6">
-                    <ul>
-                        <li class="humidity">
-                        Humidity: <span id="humidity"> </span> % 💧
+                    <span class="second-temperature-display">
+                    <div class="col-4">
+                        <span class="strong-warm" class="max-min">
+                            Max /
                         </span>
+                        <span class="light-cold" class="max-min">
+                            Min
+                        </span>
+                        <br />
+                        <span class="strong-warm" class="max-min" id="max-temperature">
+
+                        </span>  
+                        <span class="strong-warm" class="max-min" id="unit-max">°C</span>
+                       <span class="strong-warm"> / </span>
+                        <span class="light-cold" class="max-min" id="min-temperature">
+                            
+                        </span>
+                        <span class="light-cold" class="max-min" id="unit-min">°C</span>
+                    </div>
+                    <div class="col-4">
+                    <ul class="list">
+                        <li class="humidity">
+                        Humidity: <span id="humidity"> </span> % 
+                        
                         </li>
                         <li class="wind">
-                        Wind: <span id="wind"> </span> km/h 💨
+                        Wind: <span id="wind"> </span> km/h 
                         </li>
+                        </div>
+                    </ul>
                     </div>
+                </span>
+                    </span>
             </div>
-        <hr/>
+       
             <div id="forecast" class="row weather-forecast">        
       
+        </div>
+        </div>
         </div>
     <small class="bottom-text">
         <a href="https://github.com/Kokonut23/Weather-Project" target="_blank"> Open-source code</a>, by Ildikó Brust

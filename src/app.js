@@ -9,7 +9,14 @@ let year=now.getFullYear();
 
 
 function formatDay(timestamp) {
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let days = [
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday"];
     let day=days[now.getDay()];
     return `${day}`;
 }
@@ -31,7 +38,11 @@ function formatDate (timestamp) {
     ];
     let month = months[now.getMonth()];
     
-    let numbers=["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th","11th","12th","13th","14th","15th","16th","17th","18th","19th","20th","21st","22nd","23rd","24th","25th","26th","27th","28th","29th","30th","31st"];
+    let numbers=[
+        "1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th",
+        "11th","12th","13th","14th","15th","16th","17th","18th","19th","20th",
+        "21st","22nd","23rd","24th","25th","26th","27th","28th","29th",
+        "30th","31st"];
     let currentDate=numbers[now.getDate()-1];
     
     return `${month} ${currentDate} ${year}`;
@@ -50,12 +61,21 @@ function formatTime(timestamp) {
     
     return `${hours}:${minutes}`;
 }
-           
+        
+//adding OtherCelsiusTemperature
+
 function displayWeatherCondition (response) {
+    console.log(response);
     celsiusTemperature=response.data.main.temp;
+    otherCelsiusTemperature=response.data.main.temp_max;
+    thirdCelsiusTemperature=response.data.main.temp_min;
     document.querySelector("h1").innerHTML=response.data.name;
     document.querySelector("#temperature").innerHTML=Math.round(celsiusTemperature);
     document.querySelector("#unit").innerHTML=`°C`;
+    document.querySelector("#max-temperature").innerHTML=Math.round(response.data.main.temp_max);
+    document.querySelector("#min-temperature").innerHTML=Math.round(response.data.main.temp_min);
+    document.querySelector("#unit-max").innerHTML=`°C`;
+    document.querySelector("#unit-min").innerHTML=`°C`;
     document.querySelector("#humidity").innerHTML= response.data.main.humidity; 
     document.querySelector("#wind").innerHTML= Math.round(response.data.wind.speed)*3,6; 
     document.querySelector("#weather-condition").innerHTML=response.data.weather[0].main;
@@ -193,10 +213,20 @@ currentLocationButton.addEventListener("click",getCurrentLocation);
 function changeUnitFahrenheit (event) {
     event.preventDefault();
     let temperature=document.querySelector("#temperature");
+    let temperatureMax=document.querySelector("#max-temperature");
+    let temperatureMin=document.querySelector("#min-temperature");
     let unit=document.querySelector("#unit");
+    let unitMax=document.querySelector("#unit-max");
+    let unitMin=document.querySelector("#unit-min");
     let fahrenheitTemperature=(celsiusTemperature*9)/5+32;
+    let otherFahrenheitTemperature=(otherCelsiusTemperature*9)/5+32;
+    let thirdFahrenheitTemperature=(thirdCelsiusTemperature*9)/5+32;
     temperature.innerHTML=Math.round(fahrenheitTemperature);
+    temperatureMax.innerHTML=Math.round(otherFahrenheitTemperature);
+    temperatureMin.innerHTML=Math.round(thirdFahrenheitTemperature);
     unit.innerHTML=`°F`;
+    unitMax.innerHTML=`°F`;
+    unitMin.innerHTML=`°F`;
 }
 let fahrenheit=document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click",changeUnitFahrenheit);
@@ -204,17 +234,24 @@ fahrenheit.addEventListener("click",changeUnitFahrenheit);
 function changeUnitCelsius (event) {
     event.preventDefault();
     let temperature=document.querySelector("#temperature");
+    let temperatureMax=document.querySelector("#max-temperature");
+    let temperatureMin=document.querySelector("#min-temperature");
     let unit=document.querySelector("#unit");
+    let unitMax=document.querySelector("#unit-max");
+    let unitMin=document.querySelector("#unit-min");
     temperature.innerHTML=Math.round(celsiusTemperature);
+    temperatureMax.innerHTML=Math.round(otherCelsiusTemperature);
+    temperatureMin.innerHTML=Math.round(thirdCelsiusTemperature);
     unit.innerHTML=`°C`;
+    unitMax.innerHTML=`°C`;
+    unitMin.innerHTML=`°C`;
 }
 
 let celsiusTemperature=null;
+let otherCelsiusTemperature=null;
+let thirdCelsiusTemperature=null;
 
 let celsius=document.querySelector("#celsius");
 celsius.addEventListener("click",changeUnitCelsius);
 
 searchCity ("Budapest");
-
-//change temperature unit to fahrenheit for all the numbers
-//add the Bonus Feature for Celsius as well
